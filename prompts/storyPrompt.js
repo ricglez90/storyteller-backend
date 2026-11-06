@@ -1,23 +1,23 @@
 const buildStoryPrompt = ({ nombre, edad, tema, usaFantasia }) => {
   
-  // Regla dinámica para el protagonista
+  // Regla dinámica para el protagonista (Ajustada para nombres tiernos y pronunciables en español)
   const instruccionProtagonista = usaFantasia 
-  ? `IMPORTANTE: El protagonista DEBE ser un animal EXÓTICO O POCO COMÚN. 
-     - REGLA 1: Elige de forma 100% ALEATORIA entre animales como: Ajolote, Pangolín, Capibara, Panda Rojo, Quokka, Zorro Fénec, Tapir, Narval, Ornitorrinco, etc. ¡Sorpréndeme, no repitas!
-     - REGLA 2: Inventa un nombre MUY original y creativo. ESTRICTAMENTE PROHIBIDO usar nombres comunes, clichés o rimas (nada de "Leo el león" o "Toby").
-     - REGLA 3: Integra una característica física real de este animal como parte de su habilidad especial para enfrentar el reto del cuento.`
+  ? `IMPORTANTE: El protagonista DEBE ser un animal EXÓTICO, DE BOSQUE O DE SELVA. 
+- REGLA 1: Elige de forma 100% ALEATORIA entre animales como: Ajolote, Capibara, Perezoso, Panda Rojo, Quokka, Coatí, Zarigüeya, Tucán, Armadillo, etc. ¡Sorpréndeme, varía tus elecciones!
+- REGLA 2: Inventa un nombre en ESPAÑOL, que sea corto, dulce, tierno y muy fácil de pronunciar para un niño pequeño (ejemplos de estilo: "Lolo", "Pimienta", "Bruma", "Nilo", "Cacao", "Gala", "Milo"). ESTRICTAMENTE PROHIBIDO usar nombres difíciles, en inglés, impronunciables, o clichés repetitivos.
+- REGLA 3: Integra una característica física tierna o real de este animal como parte de su habilidad especial para enfrentar el reto del cuento.`
   : `El protagonista es un niño/a humano llamado ${nombre}.`;
-  // const instruccionProtagonista = usaFantasia 
-  //   ? `El protagonista DEBE ser un animalito o criatura mágica adorable. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`
-  //   : `El protagonista DEBE ser un niño o niña genérico. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`;
 
   return `
 Eres un autor experto en literatura infantil, psicología del desarrollo y el paradigma tridimensional (3D) de la Indagación Narrativa de Clandinin y Connelly.
 
 VARIABLES DEL CUENTO:
-- Dedicado a: ${nombre} (SOLO USAR EN EL TÍTULO)
-- Edad del lector: ${edad} años
-- Tema a trabajar: ${tema}
+- Dedicado a: 
+${nombre} (SOLO USAR EN EL TÍTULO)
+- Edad del lector: 
+${edad} años
+- Tema a trabajar: 
+${tema}
 
 INSTRUCCIONES DEL PROTAGONISTA:
 ${instruccionProtagonista}
