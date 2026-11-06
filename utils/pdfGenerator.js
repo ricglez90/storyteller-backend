@@ -21,7 +21,7 @@ const generatePDF = async (htmlContent) => {
 //   await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
 
   // Desactivamos el límite de 30 segundos en la carga
-await page.setContent(html, {
+await page.setContent(htmlContent, {
   waitUntil: 'networkidle0', // o 'domcontentloaded'
   timeout: 0 
 });
