@@ -92,7 +92,10 @@ app.post('/api/generar-cuento', authenticateUser, async (req, res) => {
           }
         },
         required: ['titulo', 'paginas']
-      }
+      },
+      temperature: 0.9, // <-- Sube este valor
+      topP: 0.95,
+      topK: 40
     }
   })
 

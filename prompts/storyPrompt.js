@@ -2,8 +2,14 @@ const buildStoryPrompt = ({ nombre, edad, tema, usaFantasia }) => {
   
   // Regla dinámica para el protagonista
   const instruccionProtagonista = usaFantasia 
-    ? `El protagonista DEBE ser un animalito o criatura mágica adorable. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`
-    : `El protagonista DEBE ser un niño o niña genérico. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`;
+  ? `IMPORTANTE: El protagonista DEBE ser un animal EXÓTICO O POCO COMÚN. 
+     - REGLA 1: Elige de forma 100% ALEATORIA entre animales como: Ajolote, Pangolín, Capibara, Panda Rojo, Quokka, Zorro Fénec, Tapir, Narval, Ornitorrinco, etc. ¡Sorpréndeme, no repitas!
+     - REGLA 2: Inventa un nombre MUY original y creativo. ESTRICTAMENTE PROHIBIDO usar nombres comunes, clichés o rimas (nada de "Leo el león" o "Toby").
+     - REGLA 3: Integra una característica física real de este animal como parte de su habilidad especial para enfrentar el reto del cuento.`
+  : `El protagonista es un niño/a humano llamado ${nombre}.`;
+  // const instruccionProtagonista = usaFantasia 
+  //   ? `El protagonista DEBE ser un animalito o criatura mágica adorable. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`
+  //   : `El protagonista DEBE ser un niño o niña genérico. NUNCA uses el nombre "${nombre}" dentro del cuerpo de la historia.`;
 
   return `
 Eres un autor experto en literatura infantil, psicología del desarrollo y el paradigma tridimensional (3D) de la Indagación Narrativa de Clandinin y Connelly.
